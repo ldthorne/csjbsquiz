@@ -1,0 +1,45 @@
+<template name = "quizone">
+	<h1>Quiz #1</h1>
+	<h3>Leon Thorne</h3>
+	<div class="col-md-6 col-xs-6 bg-info">
+			<h1>Enter your Project's Information</h1>
+			<form id="enterInfo">
+			Name of Project: <input type="text" name="name_project"><br/>
+			First Name: <input type="text" name="first_name"><br/>
+			Last Name: <input type="text" name="last_name"><br/>
+			URL of Deployed Meteor Project: <input type="url" name="meteor_url"><br/>
+			URL of Github Repository: <input type="url" name="github_url"><br/>
+			<input type="submit">
+			</form>
+	</div>	
+	<div class="col-md-6 col-xs-6 bg-warning">
+		<h1>Project Information</h1>
+		<hr/>
+		<table class="table table-hover">
+		<thead>
+			<tr><th>Project Name</th><th>First Name</th><th>Last Name</th><th>URL of Deployed Meteor Project</th><th>URL of Github Repository</th></tr>
+		</thead>
+		<tbody>
+			{{#each posts}}
+				{{> postrow}}
+			{{/each}}
+		</tbody>
+		</table>
+	</div>
+
+	<hr/>
+
+</template>
+
+<template name="postrow">
+	<tr>
+		<td>{{name_project}}</td>
+		<td>{{first_name}}</td>
+		<td>{{last_name}}</td>
+		<td>{{meteor_url}}</td>
+		<td>{{github_url}}</td>
+		<td>
+			<span class="glyphicon glyphicon-remove delete-icon" aria-hidden="true"></span>
+		</td>
+	</tr>
+</template>
