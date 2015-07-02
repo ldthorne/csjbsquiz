@@ -27,9 +27,11 @@ function redraw(){
 	drawContext.strokeStyle = "#000000";
 	drawContext.lineJoin = "round";
 	drawContext.lineWidth = 10;	
+	//hardcoded line to prove i know how to make a line
 	drawContext.moveTo(100, 150)
 	drawContext.lineTo(450, 50);
 	drawContext.stroke();
+	//end code for line
 	for(var i=0; i < clickX.length; i++) {		
 		drawContext.beginPath();
 		if(clickDrag[i] && i){
