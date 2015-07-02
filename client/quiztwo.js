@@ -23,9 +23,13 @@ function addClick(x, y, dragging){
 }
 
 function redraw(){
+	
 	drawContext.strokeStyle = "#000000";
 	drawContext.lineJoin = "round";
 	drawContext.lineWidth = 10;	
+	drawContext.moveTo(100, 150)
+	drawContext.lineTo(450, 50);
+	drawContext.stroke();
 	for(var i=0; i < clickX.length; i++) {		
 		drawContext.beginPath();
 		if(clickDrag[i] && i){
