@@ -1,5 +1,5 @@
 function draw(){
-	drawContext = document.getElementById('drawBoard').getContext("2d");
+	drawContext = document.getElementById('drawBoard').getContext('2d');
 	drawContext.fillStyle="yellow";
 	drawContext.fillRect(0,0,drawBoard.width,drawBoard.height);
 	drawContext.strokeStyle="#f00";
@@ -33,10 +33,10 @@ function redraw(){
 		}else{
 			drawContext.moveTo(clickX[i]-1, clickY[i]);
 		}
-	drawContext.lineTo(clickX[i], clickY[i]);
-	drawContext.closePath();
-	drawContext.stroke();
-  }
+		drawContext.lineTo(clickX[i], clickY[i]);
+		drawContext.closePath();
+		drawContext.stroke();
+	}
 }
 
 
@@ -78,9 +78,8 @@ function showCoords(event) {
     var x = event.clientX;
     var y = event.clientY;
     var coor = "(" + x + ", " + y+")";
-    console.log(x)
-    document.getElementById("coordinates").innerHTML = coor;
-    console.log(coor)
+   	document.getElementById("coordinates").innerHTML = coor;
+
 
 }
 
